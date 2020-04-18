@@ -22,12 +22,21 @@
 
 /* Clicking the label will select the checkbox which will be used to trigger the animation of the horsees */
 
-#play_button:checked ~ .horses {
+#play_button:checked ~ .horse {
     -webkit-animation: horse-ride 0.5s steps(12, end) infinite;
     -webkit-animation-delay: 2.5s;
+    -moz-animation: horse-ride 0.5s steps(12, end), infinite;
+    -moz-animation-delay: 2.5s;
     /* Lets ad a pre-anim which will start slowly and merge into the fast animation */
     background-position: -2412px 0;
     -webkit-transition: all 2.5s cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    -moz-transition: all 2.5s cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
+
+/* Hide the play image */
+#play_button:checked ~ #play_image img {
+    left: -68px;
+    -webkit-transition: all 1.0s ease-in;
 }
 
 /* 804px is the width of the image with 12 horse frames 
@@ -35,6 +44,16 @@ steps are used in the animatio to have the best animation effect
 it will position the horse frames accurately in the boxes instead of tweening 
 it px by px all the way through */
 @-webkit-keyframes horse-ride {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -804px 0;
+    }
+}
+
+@-moz-keyframes horse-ride {
     0% {
         background-position: 0 0;
     }
@@ -64,4 +83,13 @@ it px by px all the way through */
     left: 201px;
     top: 54px;
     z-index: 0;
+    overflow: hidden;
+    width: 68px;
+    height: 55px;
+}
+
+#play_image img {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
