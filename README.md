@@ -1,11 +1,14 @@
 # Google Doodle Animation with CSS3 without JavaScript
-CodePlayer Google Doodle animation in CSS3 project. Made with HTML & CSS.
+Google Doodle animation example
+
+## Tech Stack
+- HTML
+- CSS
 
 ## Instructions
-Clone this repo or download zip file. Open index.html file in your browser.
-
-## Contributions
-This code is based on starter code from CodePlayer.com. Therefore I will not be accepting pull requests.
+1. Clone this repo or download zip file. 
+2. Open index.html file in your browser.
+3. The doodle will be on the left side of screen. Press the yellow play button in the center of the second row and the animation will start. Press it again to stop the animation.
 
 ## Acknowledgements
 * TheCodePlayer.com
